@@ -3,7 +3,7 @@
 I answer two questions using data from Politifact:  
 
 1. **Imbalance in scruity**: Do they vet statements by Democrats or Democratic leaning organizations more than statements Republicans or Republican leaning organizations?  
-2. **Batting average by party** Roughly n_correct/n_checked, but instantiated here as mean Politifact rating.   
+2. **Batting average by party**: Roughly n_correct/n_checked, but instantiated here as mean Politifact rating.   
 
 To answer the questions, I scraped data from [http://politifact.com](http://politifact.com) and independently coded and appended data on party of the person or organization covered. (Feel free to download the [script](politifact.R) for scraping and analyzing the data, [scraped data](politifacts.csv) and [data linking people and organizations to party](pol_names.csv). If you catch an error, please let me know by opening an issue.)
 
