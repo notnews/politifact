@@ -6,6 +6,7 @@ I answer two questions using data from Politifact:
 2. **Batting average by party**: Roughly n_correct/n_checked, but instantiated here as mean Politifact rating.   
 
 To interpret the numbers, you need to make two assumptions:  
+
 1. Number of statements made by Republicans and Republican leaning persons and organizations is the same as that made by people and organizations on the left.  
 2. Truthiness of statements by Republican and Republican leaning persons and organizations is the same as that of left leaning people and organizations.
 
