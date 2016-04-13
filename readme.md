@@ -5,6 +5,10 @@ I answer two questions using data from Politifact:
 1. **Imbalance in scruity**: Do they vet statements by Democrats or Democratic leaning organizations more than statements Republicans or Republican leaning organizations?  
 2. **Batting average by party**: Roughly n_correct/n_checked, but instantiated here as mean Politifact rating.   
 
+To interpret the numbers, you need to make two assumptions:
+1. Number of statements made by Republicans and Republican leaning persons and organizations is the same as that made by people and organizations on the left.  
+2. Truthiness of statements by Republican and Republican leaning persons and organizations is the same as that of left leaning people and organizations.
+
 To answer the questions, I scraped data from [http://politifact.com](http://politifact.com) and independently coded and appended data on party of the person or organization covered. (Feel free to download the [script](politifact.R) for scraping and analyzing the data, [scraped data](politifacts.csv) and [data linking people and organizations to party](pol_names.csv). If you catch an error, please let me know by opening an issue.)
 
 Until now, Politifact has checked veracity of 3,859 statements by 703 politicians and organizations. Of the 703 politicians and organizations, I was able to establish the partisanship of 554. I restrict analysis to 3,396 statements by the 554 organizations and people whose partisanship I could establish, and who lean either towards the Republican or Democratic party. I code the Politifact 6-point True to Pants on Fire scale (true, mostly-true, half-true, barely-true, false, pants-fire) linearly so that it lies between 0 (pants-fire) and 1 (true).
