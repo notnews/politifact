@@ -20,7 +20,7 @@ When you take out Barack Obama, percentage of Democrats receiving scrutiny reduc
 
 To analyze whether there is selection bias in covering politicians who incorrect things more often, I estimated the correlation between batting average and total number of statements investigated. The correlation --- I adjusted for the skew by trying out rank order correlations and correlation with log of total statements --- are very weak, and do not appear to vary systematically by party. The figure below plots batting average as a function of total statements investigated.
 
-<img src="figs/t30_batting_average_total_investigated.png" width="500">
+<img src="figs/batting_average_total_investigated.png" width="500">
 
 
 **Caveats About Interpretation**
