@@ -1,6 +1,10 @@
 ## Some Facts about Politifact
 
-I assessed Politifact on: 1) imbalance in scruity: Do they vet statements by Democrats or Democratic leaning organizations more than statements Republicans or Republican leaning organizations, and 2) batting average by party (roughly n_correct/n_checked) but really mean politifact rating. 
+I assessed Politifact on:  
+
+1. **Imbalance in scruity**: Do they vet statements by Democrats or Democratic leaning organizations more than statements Republicans or Republican leaning organizations?  
+
+2. **Batting average by party**: Roughly n_correct/n_checked, but instantiated here as mean Politifact rating.     		  
 
 To answer the question, I scraped the data from [politifact](http://politifact.com) and independently coded and appended data on party of the person or organization covered. Feel free to download the [script](politifact.R) for scraping and analyzing the data, [scraped data](politifacts.csv) and [data linking people and organizations to party](pol_names.csv).
 
@@ -19,3 +23,10 @@ To analyze whether there is selection bias in covering politicians who incorrect
 <img src="figs/t30_batting_average_total_investigated.png" width="500">
 
 
+**Caveats About Interpretation**
+
+To interpret the numbers, you need to make two assumptions:      
+
+1. Number of statements made by Republicans and Republican leaning persons and organizations is the same as that made by people and organizations on the left.   		  
+
+2. Truthiness of statements by Republican and Republican leaning persons and organizations is the same as that of left leaning people and organizations.  
