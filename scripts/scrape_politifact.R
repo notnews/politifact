@@ -4,9 +4,7 @@ Author: Gaurav Sood
 Date: 4/10/2016
 
 Aim:
-Analyzing politifact data
-Bias in Scrutiny, Batting Average by R and D
-
+Scrape and save
 "
 
 # Load lib
@@ -40,27 +38,4 @@ outdf <- ldply(out)
 outdf$page_names <- gsub("^ | $", "", outdf$page_names)
 
 write.csv(outdf[,-1], file="politifacts.csv", row.names=FALSE)
-
-# Output Pol Names 
-# write.csv(unique(outdf$page_names), file="pol_names.csv", row.names=FALSE)
-
-# Merge data on party affiliation of groups covered
-pol_facts <- read.csv("politifacts.csv")
-pol_names <- read.csv("pol_names.csv")
-
-pol_all   <- merge(pol_facts, pol_names, by.x="page_names", by.y="x", all.x=T, all.y=F)
-
-# Subset on statements by orgs. whose partisanship we know 
-pol_all <- subset(pol_all, (lean_dem %in% c("1", "0")))
-
-# Selection Bias 
-mean(pol_all$lean_dem==1)
-mean(pol_all$lean_dem==0)
-
-# Ratings
-pol_all$ratings <- zero1(car::recode(pol_all$politifact.cat.j., "'true'=6;'mostly-true'=5;'half-true'=4;'barely-true'=3;'false'=2;'pants-fire'=1"))
-
-# Batting Average---assuming no bias in selection of statements
-sum(pol_all$ratings[pol_all$lean_dem==1])/sum(pol_all$lean_dem==1)
-sum(pol_all$ratings[pol_all$lean_dem==0])/sum(pol_all$lean_dem==0)
 
