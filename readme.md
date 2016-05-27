@@ -27,6 +27,6 @@ To analyze whether there is selection bias in covering politicians who incorrect
 
 To interpret the numbers, you need to make two assumptions:      
 
-1. Number of statements made by Republicans and Republican-leaning persons and organizations is the same as that made by people and organizations on the left.   		  
+1. The number of statements made by Republicans and Republican-leaning persons and organizations is the same as that made by people and organizations on the left.   		  
 
 2. Truthiness of statements by Republican and Republican-leaning persons and organizations is the same as that of left leaning people and organizations.  
